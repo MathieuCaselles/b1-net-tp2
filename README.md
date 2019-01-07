@@ -142,7 +142,7 @@ Allez dans Règles de Traffic entrant puis dans «  Nouvelle Règle », dans typ
 On teste le netcat et ça fonctionne.
 
  ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/8.png)
-#
+
 
 ## III Manipulation d’autres outil protocole côté client
 ### 1 DHCP
@@ -150,7 +150,7 @@ Je fais un ipconfig /all et trouve l’adresse ip ip ici :
 
 ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/16.png)
 
-et la date d'expiration ici:
+et la date d'expiration ici:  
 ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/17.png)
 
  
