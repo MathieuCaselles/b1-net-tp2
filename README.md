@@ -59,13 +59,14 @@ J’ai donc changé d’adresse ip :
 
 NMAP
 
-Il faut rentrer ces commandes :  
+Il faut rentrer la commande nmap -sn -PE 10.33.0.0/22 et il se passe ceci :  
 
 
 ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/14.png)
 
 ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/15.png)
  
+Je change ensuite mon adresse ip grâce a NMAP et ma gateway mais j'avais déja en effet une adresse ip.
 
 ## II. Partie 2 Exploration Local en Duo
 
