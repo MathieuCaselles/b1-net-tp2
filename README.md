@@ -1,4 +1,73 @@
-# II. Partie 2 Exploration Local en Duo
+#Rendu TP
+
+## I – Exploration locale en solo
+### 1. Affichage d'informations sur la pile TCP/IP locale
+
+_Afficher infos carte réseau pc:_
+Pour se faire j’écris ipconfig /all dans le terminal
+
+_Interface wifi:_
+Nom : (dit descption sur mon pc) Qualcomm Atheros QCA61x4A Wireless Network Adapter
+Adresse mac : (dit adresse physique sur mon pc) 30-52-CB-17-5E-2B
+IP : 10.33.3.164
+
+_Interface ethernet :_
+Nom : (dit description sur mon pc) Realtek PCIe GBE Family Controller    
+Adresse mac : (dit adresse physique sur mon pc) 30-65-EC-8B-25-DC
+IP : je suis pas connecté par Ethernet donc j’en ai pas
+
+Adresse réseau wifi : l’IP est 10.33.3.164 et le masque est  255.255.252.0 dit aussi /22
+Pour calculer je convertit donc en binaire ce qui donne pour l’IP : 00001010.00100001.00000011.10100100
+Et pour le masque : 11111111.11111111.11111100.00000000
+Pour determiner l’adresse réseau il faut donc garder tous les nombre binaire tant qu’il y a des 1 dans le masque et passer le reste a zero
+On a donc pour l’ip en binaire 00001010.00100001.00000000.00000000. On reconvertit en base 10 : 10.33.0.0
+
+Adresse broadast : il faut remplacer le dernier nombre du l’adresse ip par 255 donc cela donne 10.33.3.255
+
+__Je ne peux pas calculer pour ethernet car je ne suis pas connecté par ethernet.__
+
+_Afficher Gateaway (adresse passerelle) :_
+Il faut faire ipconfig /all et l’adresse passerelle fait partit des information affiché grace a cette commande donc ici 10.33.3.253
+
+_Avec l’interface graphique :_
+Pour windows il faut aller dans les parametres, puis cliquer sur réseau et internet, puis centre réseau et partage puis sur wi-fi (wifi@ynov) dans le cadre de ce tp (voir image ci-dessous) ensuite il suffit d’appuyer sur détail et toutes les infos s’afficheront.
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/11.png)
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/12.png)
+ 
+
+Dans le screen, l’adresse pysique correspond a l’adresse mac, l’adresse IPv4 est l’IP et passerelle par défaut IPv4 est la gateway
+
+
+_Question : a quoi sert la gateway dans le réseau d’Ingésup ?_
+Réponse : Elle sert à donner l’accès a internet aux réseaux d’ingesup.
+
+### 2 modification d’information :
+##### A-	Modification d’adresse IP – pt. 1
+
+Calcul de la premiere et derniere IP du réseau : l’adresse réseau est 10.33.0.0/22 et donc la deniere ip disponible est 10.33.3.255.
+
+Changer d’adresse ip par interface graphique windows : c’est le même chemin que pour voir les détails sauf qu’a la fin au lieu de cliquer sur détail il faut cliquer sur propriété puis sur protocole internet version 4 puis sur propriété
+
+
+J’ai donc changé d’adresse ip :  
+
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/13.png)
+
+
+
+NMAP
+
+Il faut rentrer ces commandes :  
+
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/14.png)
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/15.png)
+ 
+
+## II. Partie 2 Exploration Local en Duo
 
 Pour désactiver le firewall aller ici « Panneau de configuration\Tous les Panneaux de configuration\Pare-feu Windows\Personnaliser les paramètres » et cliquez sur « Désactiver le Pare-feu Windows (non recommandé) » pour les 2 modes de réseaux puis sauvegarder en cliquant sur « Ok »
 
