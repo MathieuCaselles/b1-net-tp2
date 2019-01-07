@@ -143,3 +143,51 @@ On teste le netcat et ça fonctionne.
 
  ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/8.png)
 #
+
+## III Manipulation d’autres outil protocole côté client
+### 1 DHCP
+Je fais un ipconfig /all et trouve l’adresse ip ip ici :
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/16.png)
+
+et la date d'expiration ici:
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/17.png)
+
+ 
+
+Ça expire au bout d’une heure.
+
+_Dhcp dans les grandes ligne :_
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/18.png)
+ 
+Pour demander une nouvelle adresse réseau en ligne de commande je tape d’abord ipconfig /release 
+On peut voir qu’il n’y a plus bail obtenu et bail expirant (à partir de ce screen le tp a été fait chez moi donc pas depuis la box d’ynov)
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/19.png)
+ 
+Puis je tape maintenant ipconfig /renew
+Et après quelques instant je retrouve bien bail obtenu et expirant avec l’adresse du serveur dhcp :
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/20.png)
+
+
+  
+
+### 2 DNS
+Je fait un ipconfig /all et trouve le serveur dns ici :
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/21.png)
+ 
+
+_Utiliser nslookup_
+ 
+ ![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/22.png)
+
+Les résultats de cette commande montrent que l’IP  de google se trouve a 216.58.198 (l’adresse au dessus est peut être l’adresse ipv6 ?) et l’adresse d’ynov se trouve à 192.168.0.254. 
+
+_Utiliser reverse lookup :_
+
+![alt text](https://github.com/MathieuCaselles/b1-net-tp2/blob/master/screen/23.png)
+ 
+Je suppose donc qu’aucun nom de domaine n’est associé à ces IP
